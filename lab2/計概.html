@@ -3,11 +3,31 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style type="text/css">
+
+
+   span{background-color:lightblue ;color:black; padding:10px;border:1px solid black;}
+   #intro{color:red;}
+   .extra span{color:inherit} 
+
+	body{background-color: lightyellow;}
+
+    
+	em{font-weight: bold; color:blue}
+	h1{font-family: tahoma,helvetica,sans-serif; font-size:12pt}
+	p{font-family: arial,sans-serif; }
+    
+
+   
+
+
+   </style>
 	<title></title>
 </head>
 <body>
-<p>Lab1111 林家豪</p>
-<h1>Introduce myself</h1>
+<p class="extra" style="color:green">Lab1111 <span>林家豪</span></p>
+<h1 id="intro">Introduce myself</h1>
 <table border = "1"  style = "width:100%">
 	<tr>
 		<th>Students ID</th>
@@ -22,7 +42,7 @@
     	<th> <a href = "mailto:qaz3301.jason@gmail.com">email</a></th>
     </tr>
     <tr>
-    	<th>Habit</th>
+    	<th><span>Habit</span></th>
     	<th>Play basketball</th>
     <tr>
     	<th rowspan = "2">image</th>
@@ -35,12 +55,19 @@
     </tr>
     <tr>
     	<th colspan = "2">picture</th>
-    
+    	
     </th>
     <tr>
-    	<th><img src ="Unknown"></th>
     	<th><img src ="images.jpeg"></th>
-    </tr>
+    	<th><img src ="Unknown"></th>
+    
+    
+<p class="botton">
+    <input type="Submit" value="Submit">
+	<input type="Reset" value="Clear" >
+    <a href="計概.html">
+    	<button type="button">Visit next page</button>
+</p>
 
 </table>
 </body>
