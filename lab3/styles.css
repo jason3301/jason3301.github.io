@@ -1,0 +1,46 @@
+
+body {
+  display: inline-block;
+  padding: 10px;
+  font-family: 'PingFang TC', 'Noto Sans TC', 'Helvetica Neue', Arial,
+    sans-serif;
+  color: pink;
+  background-color: rgb(145, 162, 161);
+}
+
+.navbar {
+  display: none;
+  width: 200px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  border: 3px solid pink;
+}
+
+.navbar li {
+  border-right: 3px solid #5656c7;
+  margin: 10px;
+  padding: 10px;
+  background: #fff;
+
+}
+
+
+
+.navbar li:hover {
+  background-color: #ddd;
+}
+
+body:hover .navbar {
+  display: block;
+}
+
+
+span {color:black;}
+
+@media screen and (max-width: 512px) {
+    nav ul  li {
+      background-color: royalblue;
+    }
+
+
