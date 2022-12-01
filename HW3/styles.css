@@ -1,0 +1,71 @@
+
+
+body{
+   
+    }
+
+.container{
+  margin-right:auto;
+  margin-left: auto;
+  
+  background-color: green;
+}
+
+
+
+
+.badge {
+  width: 100%;
+  float: left;
+  padding-top: 14px;
+}
+
+.row1{
+  width:10%;
+  float:left;
+}
+
+
+.row2{
+  width:70% ;
+  float:left;
+
+}
+
+
+.row3{
+  width:30% ;
+  float:left;
+}
+
+.row4{
+  width:60%;
+   float:left;
+}
+label {
+  width: 100%;
+  text-align:right;
+  margin-left: 50%;
+}
+
+input {
+  width: 100%;
+}
+
+textarea{
+  width:100%;
+  height: ;
+}
+
+@media screen and (max-width: 512px) {
+  body{
+    background-color: pink;
+  }
+}
+
+@media print and (min-width: 512px) {
+  body{
+    background-color: black;
+  }
+}
+
