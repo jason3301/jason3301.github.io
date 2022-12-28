@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<script>
+
+
+(function () {
+  var sum = 0;
+  document.addEventListener('DOMContentLoaded', start);
+
+  function start() {
+    var $button = document.getElementById('button');
+    $button.addEventListener('click', go);
+  }
+
+  function go() {
+    var $value1 = document.getElementById('value1');
+    var $value2 = document.getElementById('value2');
+    var $select = document.getElementById('select');
+
+    var value1 = parseInt($value1.value);
+    var value2 = parseInt($value2.value);
+    var select = $select.value;
+
+    switch (select) {
+      case 'sub':
+        sum = value1 - value2;
+        break;
+      case 'mult':
+        sum = value1 * value2;
+        break;
+      case 'divi':
+        sum = value1 / value2;
+        break;
+      case 'add':
+      default:
+        sum = value1 + value2;
+        break;
+    }
+
+    setOutput(sum || 0);
+  }
+
+  function setOutput(result) {
+    var $output = document.getElementById('output');
+
+    $output.textContent = 'result = ' + result;
+  }
+})();
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+
+<h1>JS Calculator</h1>
+
+    <input type="number" id="value1" value="0" />
+    <input type="number" id="value2" value="0" />
+    <select id="select" name="select">
+      <option value="add" selected>+</option>
+      <option value="sub">-</option>
+      <option value="mult">*</option>
+      <option value="divi">/</option>
+    </select>
+    <div id="button">算</div>
+    <div id="output">result = 0</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
