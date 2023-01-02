@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<script type="text/javascript">
+	(function () {
+  var indexStore = [];
+  document.addEventListener('DOMContentLoaded', start);
+
+  function start() {
+    var $button = document.getElementById('button');
+    $button.addEventListener('click', go);
+  }
+
+  function go() {
+    var $value = document.getElementById('value1');
+    var $regex = document.getElementById('value2');
+    var value = $value.value.toLowerCase();
+    var regex = $regex.value.toLowerCase();
+    var i = 0;
+
+    indexStore = [];
+
+    while (true) {
+      var result = value.indexOf(regex, i);
+
+      if (result !== -1) {
+        indexStore.push(result);
+        i += result + 1;
+      } else {
+        break;
+      }
+    }
+
+    setOutput();
+  }
+
+  function setOutput() {
+    var $output = document.getElementById('output');
+
+    $output.textContent = 'index => ' + indexStore.join(', ');
+  }
+})();
+
+</script>
+</head>
+<body>
+<input id="value1" value="Empty vessels make the most sound" />
+    <input id="value2" value="e" />
+    <div id="button">按</div>
+    <div id="output"></div>
+</body>
+</html>
